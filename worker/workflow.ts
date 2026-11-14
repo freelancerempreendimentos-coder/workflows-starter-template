@@ -58,7 +58,7 @@ export class MyWorkflow extends WorkflowEntrypoint<
 		await notifyStep("final", "running");
 		await step.do("final", async () => {
 			console.log("Results:", { result, approval: approval.payload });
-			await new Promise((resolve) => setTimeout(resolve, 1000));
+			await new Promise((resolve) => setTimeout(resolve, 2000)); /teste
 		});
 		await notifyStep("final", "completed");
 	}
